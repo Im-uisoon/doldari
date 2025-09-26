@@ -1,14 +1,15 @@
 # 공사장 안전관리 웹 '돌다리'
 
 ## 프로젝트 개요
+
 공사장 안전사고 방지 및 즉각적인 조치를 위한 시스템을 제공하는 웹/앱 개발
 
-| 이름 | 전공 | 이메일 | 깃허브 |
-| --- | --- | --- | --- |
-| 임의순 | 컴퓨터공학 | dla5420@naver.com | Im-uisoon |
-| 박우현 | 컴퓨터공학 | ouhyeun40@gmail.com | savre01 |
-| 이차원 | 컴퓨터공학 | ckdnjs7456@naver.com | Lee-Dimension |
-| 김희곤 | 소프트웨어공학 | gmlrhs01312@naver.com | heegon02 |
+| 이름   | 전공           | 이메일                | 깃허브        |
+| ------ | -------------- | --------------------- | ------------- |
+| 임의순 | 컴퓨터공학     | dla5420@naver.com     | Im-uisoon     |
+| 박우현 | 컴퓨터공학     | ouhyeun40@gmail.com   | savre01       |
+| 이차원 | 컴퓨터공학     | ckdnjs7456@naver.com  | Lee-Dimension |
+| 김희곤 | 소프트웨어공학 | gmlrhs01312@naver.com | heegon02      |
 
 figma:
 https://www.figma.com/design/YpRoGESBhF9XIfQMHAvKh9/%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C?node-id=0-1&t=aYxNUxowQewyxqKG-1
@@ -18,7 +19,7 @@ https://drive.google.com/file/d/17RHDqynIMpBhe7jr9srJYuINnYG6L7vZ/view?usp=shari
 
 ## API / Data
 
- https://digitalsolveup.kr/service-api
+https://digitalsolveup.kr/service-api
 
 https://www.data.go.kr/
 

@@ -4,7 +4,7 @@
     <div class="background-in">
       <!-- 중앙 설정 -->
       <main class="main-setting">
-        <img :src="import.meta.env.BASE_URL + 'doldari.png'" class="w-35 h-35 md:w-60 md:h-60" />
+        <img :src="baseURL + 'doldari.png'" class="w-35 h-35 md:w-60 md:h-60" />
 
         <!-- 지역/현장 -->
         <div class="w-full mx-auto max-w-md sm:max-w-lg px-4 sm:px-0 mb-1 md:mb-4 flex flex-col sm:flex-row gap-2 md:gap-4">
@@ -79,6 +79,7 @@ import { ref, computed, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const baseURL = import.meta.env.BASE_URL;
 
 // 선택 값 (ID 바인딩)
 const region = ref(""); // regionId
