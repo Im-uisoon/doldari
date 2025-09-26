@@ -97,7 +97,7 @@ const popupMessage = ref("");
 
 const logout = async () => {
   try {
-    await fetch("http://localhost:8080/api/auth/logout", {
+    await fetch("http://doldariback-production.up.railway.app/api/auth/logout", {
       method: "POST",
       headers: { Accept: "application/json" },
       credentials: "include",
@@ -158,7 +158,7 @@ onMounted(async () => {
 
   // 프로필 조회 및 entryBlock 안내
   try {
-    const res = await fetch("http://localhost:8080/api/user/profile", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/user/profile", {
       method: "GET",
       headers: { Accept: "application/json" },
       credentials: "include",

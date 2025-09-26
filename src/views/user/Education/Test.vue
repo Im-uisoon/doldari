@@ -209,7 +209,7 @@ const finishTestAndSaveResult = async () => {
     const storedUser = sessionStorage.getItem("loggedInUser");
     const user = storedUser ? JSON.parse(storedUser) : null;
 
-    const res = await fetch("http://localhost:8080/api/user/education-test", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/user/education-test", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

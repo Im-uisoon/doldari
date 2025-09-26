@@ -97,7 +97,7 @@ const fetchToday = async () => {
   loading.value = true;
   error.value = "";
   try {
-    const res = await fetch("http://localhost:8080/api/user/today", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/user/today", {
       method: "GET",
       headers: { Accept: "application/json" },
       credentials: "include",
@@ -145,7 +145,7 @@ const startCountdown = () => {
 const completeCurrent = async () => {
   if (!currentItem) return;
   try {
-    const res = await fetch("http://localhost:8080/api/user/today/complete", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/user/today/complete", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       credentials: "include",
@@ -173,7 +173,7 @@ onMounted(() => {
 
 const fetchProfileAndMaybeTeam = async () => {
   try {
-    const res = await fetch("http://localhost:8080/api/user/profile", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/user/profile", {
       method: "GET",
       headers: { Accept: "application/json" },
       credentials: "include",
@@ -204,7 +204,7 @@ const fetchTeamStatus = async (siteId) => {
   teamError.value = "";
   try {
     // 제공된 엔드포인트 사용
-    const res = await fetch(`http://localhost:8080/api/location/sites/${siteId}/training-status`, {
+    const res = await fetch(`http://doldariback-production.up.railway.app/api/location/sites/${siteId}/training-status`, {
       method: "GET",
       headers: { Accept: "application/json" },
       credentials: "include",

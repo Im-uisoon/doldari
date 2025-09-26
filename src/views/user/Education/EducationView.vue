@@ -245,7 +245,7 @@ const completeEducation = async () => {
     const todayStr = `${year}-${month}-${day}`;
     // 서버에 교육 이수 상태 갱신 요청 (endpoint 변경)
     const res = await fetch(
-      "http://localhost:8080/api/user/education-leaning",
+      "http://doldariback-production.up.railway.app/api/user/education-leaning",
       {
         method: "POST",
         headers: {

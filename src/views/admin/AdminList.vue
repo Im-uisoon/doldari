@@ -107,7 +107,7 @@ onMounted(async () => {
 
 async function loadLocations() {
   // /api/location: 팀 리스트 + region 객체. 지역별 그룹화
-  const res = await fetch("http://localhost:8080/api/location", {
+  const res = await fetch("http://doldariback-production.up.railway.app/api/location", {
     method: "GET",
     headers: { Accept: "application/json" },
     credentials: "include",
@@ -148,7 +148,7 @@ function onSelectUser(u) {
 
 async function loadUsersOfSite(siteId) {
   users.value = [];
-  const res = await fetch(`http://localhost:8080/api/location/sites/${siteId}/users`, {
+  const res = await fetch(`http://doldariback-production.up.railway.app/api/location/sites/${siteId}/users`, {
     method: "GET",
     headers: { Accept: "application/json" },
     credentials: "include",
@@ -169,7 +169,7 @@ async function loadUsersOfSite(siteId) {
 async function addRegion() {
   const name = newRegionName.value.trim();
   if (!name) return alert("현장 이름을 입력하세요.");
-  const res = await fetch("http://localhost:8080/api/location/regions", {
+  const res = await fetch("http://doldariback-production.up.railway.app/api/location/regions", {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     credentials: "include",
@@ -184,7 +184,7 @@ async function addSite() {
   if (!selectedRegion.value) return alert("먼저 현장을 선택하세요.");
   const name = newSiteName.value.trim();
   if (!name) return alert("팀 이름을 입력하세요.");
-  const res = await fetch("http://localhost:8080/api/location/sites", {
+  const res = await fetch("http://doldariback-production.up.railway.app/api/location/sites", {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     credentials: "include",
@@ -209,7 +209,7 @@ async function addUser() {
   if (!name || !phone) return alert("이름/전화는 필수입니다.");
   // siteId를 숫자로 보냄
   const siteId = Number(selectedSite.value.id);
-  const res = await fetch("http://localhost:8080/api/location/users", {
+  const res = await fetch("http://doldariback-production.up.railway.app/api/location/users", {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     credentials: "include",
@@ -246,7 +246,7 @@ async function addUser() {
 async function deleteSelected() {
   try {
     if (selectedUser.value) {
-      const res = await fetch(`http://localhost:8080/api/location/users/${selectedUser.value.id}`, {
+      const res = await fetch(`http://doldariback-production.up.railway.app/api/location/users/${selectedUser.value.id}`, {
         method: "DELETE",
         headers: { Accept: "application/json" },
         credentials: "include",
@@ -257,7 +257,7 @@ async function deleteSelected() {
       return;
     }
     if (selectedSite.value) {
-      const res = await fetch(`http://localhost:8080/api/location/sites/${selectedSite.value.id}`, {
+      const res = await fetch(`http://doldariback-production.up.railway.app/api/location/sites/${selectedSite.value.id}`, {
         method: "DELETE",
         headers: { Accept: "application/json" },
         credentials: "include",
@@ -271,7 +271,7 @@ async function deleteSelected() {
       return;
     }
     if (selectedRegion.value) {
-      const res = await fetch(`http://localhost:8080/api/location/regions/${selectedRegion.value.id}`, {
+      const res = await fetch(`http://doldariback-production.up.railway.app/api/location/regions/${selectedRegion.value.id}`, {
         method: "DELETE",
         headers: { Accept: "application/json" },
         credentials: "include",

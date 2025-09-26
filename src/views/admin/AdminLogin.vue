@@ -89,7 +89,7 @@ const login = async () => {
   loginError.value = false;
 
   try {
-    const res = await fetch("http://localhost:8080/api/auth/admin-login", {
+    const res = await fetch("http://doldariback-production.up.railway.app/api/auth/admin-login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
