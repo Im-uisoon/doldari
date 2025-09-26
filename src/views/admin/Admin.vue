@@ -50,7 +50,7 @@ onMounted(() => {
 
 const logout = async () => {
   try {
-    await fetch("http://doldariback-production.up.railway.app/api/auth/logout", {
+    await fetch("https://doldariback-production.up.railway.app/api/auth/logout", {
       method: "POST",
       headers: { Accept: "application/json" },
       credentials: "include",

@@ -207,7 +207,7 @@ onMounted(async () => {
 
   // 2) 일반 사용자: 서버 상태 조회
   try {
-    const res = await fetch("http://doldariback-production.up.railway.app/api/user/education", {
+    const res = await fetch("https://doldariback-production.up.railway.app/api/user/education", {
       method: "GET",
       headers: { Accept: "application/json" },
       credentials: "include",

@@ -97,7 +97,7 @@ onMounted(async () => {
   locationsLoading.value = true;
   locationsError.value = false;
   try {
-    const res = await fetch("http://doldariback-production.up.railway.app/api/location", {
+    const res = await fetch("https://doldariback-production.up.railway.app/api/location", {
       method: "GET",
       headers: { Accept: "application/json" },
     });
@@ -155,7 +155,7 @@ const login = async () => {
 
   loginError.value = false;
   try {
-    const res = await fetch("http://doldariback-production.up.railway.app/api/auth/login", {
+    const res = await fetch("https://doldariback-production.up.railway.app/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

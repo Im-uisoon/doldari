@@ -78,7 +78,7 @@ const TASK_OPTIONS = ["철근배근", "용접작업", "비계설치", "나사박
 onMounted(loadLocations);
 
 async function loadLocations() {
-  const res = await fetch("http://doldariback-production.up.railway.app/api/location", {
+  const res = await fetch("https://doldariback-production.up.railway.app/api/location", {
     method: "GET",
     headers: { Accept: "application/json" },
     credentials: "include",
@@ -132,7 +132,7 @@ async function submitTask() {
     tasks: [...selectedTasks.value],
   };
   try {
-    const res = await fetch("http://doldariback-production.up.railway.app/api/task", {
+    const res = await fetch("https://doldariback-production.up.railway.app/api/task", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       credentials: "include",
