@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Main from "../views/Main.vue";
 import UserLogin from "../views/user/Login.vue";
@@ -99,7 +99,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // GitHub Pages에서는 해시 모드가 새로고침 404를 방지합니다.
+  history: createWebHashHistory(),
   routes,
   // 페이지 전환 시 스크롤을 맨 위로
   scrollBehavior() {
