@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+/* Custom scrollbars for elements using Tailwind's overflow-y-auto
+	 This mirrors the Vue scoped rules and applies globally to any
+	 element that uses the utility class. Also includes Firefox rules. */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/*siren page*/
+@layer components {
+  /* 배경화면 설정*/
+  .background-out { @apply bg-[#FFFEEF] min-h-screen; }
+  .background-in { @apply w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto p-4 sm:p-5 font-[Roboto]; }
+
+  /* 로그인 버튼 */
+  .login-button { @apply w-full text-black text-lg font-bold py-2 rounded-2xl border border-[#78711D]; }
+
+  /* 헤더 영역 */
+  .head-setting { @apply flex justify-between items-center; }
+  .heed-text { @apply text-lg font-bold; }
+
+  /* 인풋 */
+  .input-label { @apply block text-sm text-[#454F3F] mb-1; }
+  .input-box { @apply w-full border border-[#454F3F] rounded-2xl px-4 py-3 focus:outline-none; }
+
+  /* 중앙 정렬 */
+  .main-setting { @apply flex flex-col items-center; }
+
+  /* 큰 박스 */
+  .brown-box { @apply flex justify-center items-center w-full bg-[#454F3F] rounded-2xl cursor-pointer; }
+  .yellow-box { @apply bg-[#D2C30F] text-white px-20 py-15 rounded-2xl flex justify-center items-center; }
+
+  /* 작은 박스 */
+  .small-box { @apply flex justify-center items-center w-full bg-white text-[#1D1A05] rounded-2xl border border-[#A2A2A2] cursor-pointer; }
+
+  /* 페이지 박스/버튼 */
+  .page-box { @apply w-full bg-white rounded-2xl border border-[#A2A2A2] p-4; }
+  .page-button { @apply w-full bg-[#FFFDE3] hover:bg-[#FFF6B3] text-[#1D1A05] rounded-2xl border border-[#DCD7B8] py-3; }
+
+  /* 긴급 버튼(리스트 등 공용) */
+  .emergency-button { @apply bg-[#FFFDE3] text-[#1D1A05] rounded-2xl border border-[#DCD7B8] px-4 py-2; }
+
+  /* 클릭형 버튼 (상태 토글용) */
+  .button-click { @apply p-2 mb-2 rounded-md cursor-pointer text-center h-15 w-full flex items-center justify-center border; }
+  .button-click-before { @apply bg-black text-[#3A9CFF] border-[#3A9CFF]; }
+  .button-click-after  { @apply bg-gray-100 text-[#1D1A05] hover:bg-[#FFFDE3] border-[#DCD7B8]; }
+}
